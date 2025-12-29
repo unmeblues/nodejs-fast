@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/api', indexRoutes);
 
-const mongoURI = process.env.MONGODB_LOCAL;
+const mongoURI = process.env.MONGODB_URI;
 mongoose.connect(mongoURI)
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
